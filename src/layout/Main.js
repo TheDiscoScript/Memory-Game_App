@@ -10,15 +10,14 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   paper: {
-    border: "solid black 1px",
     textAlign: "center",
     paddingLeft: "0.5rem",
     marginTop: "1rem",
   },
   sidebar: {
+    marginLeft: "1rem",
     marginTop: "1rem",
     textAlign: "center",
-    border: "solid black 1px",
   },
 }));
 
@@ -27,24 +26,45 @@ const Main = () => {
   const cards = data;
   const [clickedCards, setClickedCards] = useState([]);
   const [currentScore, setCurrentScore] = useState(0);
-  const [highScore, setHighScore] = useState();
+  const [highScore, setHighScore] = useState(0);
 
   useEffect(() => {
     shuffleArray(cards);
   });
-
+  //if doesn't include id, then add to array, ELSE reset
   const handleGame = (e) => {
-    console.log(e.target);
-    console.log(e.target.id);
-    setClickedCards((prevClickedCards) => [
-      ...prevClickedCards,
-      e.target.closest(".MuiPaper-root").id,
-    ]);
-    console.log(clickedCards);
-    setCurrentScore((prevCurrentScore) => {
-      prevCurrentScore = prevCurrentScore + 1;
-    });
+    if (!clickedCards.includes(e.target.closest(".MuiPaper-root").id)) {
+      setClickedCards((prevClickedCards) => [
+        ...prevClickedCards,
+        e.target.closest(".MuiPaper-root").id,
+      ]);
+      setCurrentScore(clickedCards.length + 1);
+      if (currentScore >= highScore) {
+        setHighScore(currentScore + 1);
+        if (currentScore === 17) {
+          alert("You won! You have a great memory! Well done!");
+          setCurrentScore(0);
+          setClickedCards([]);
+        }
+      }
+    } else {
+      alert("Better luck next time");
+      setCurrentScore(0);
+      setClickedCards([]);
+    }
+    // setClickedCards((prevClickedCards) => [
+    //   ...prevClickedCards,
+    //   e.target.closest(".MuiPaper-root").id,
+    // ]);
+    // console.log(clickedCards);
+    // setCurrentScore(clickedCards.length + 1);
+    // console.log(currentScore);
+    // if (currentScore >= highScore) {
+    //   setHighScore(currentScore + 1);
+    // }
+    // console.log(highScore);
   };
+
   //STACKOVERFLOW community is the best
   const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -80,6 +100,10 @@ const Main = () => {
           {renderOutCards()}
         </Grid>
         <Grid item xs={12} sm={12} md={2} lg={2} className={classes.sidebar}>
+          <Typography variant="subtitle1" gutterBottom>
+            This is game which tests your memory. Click on Icons but be carefull
+            to not click on same Icons! If you do so the game will restart!
+          </Typography>
           <Typography variant="subtitle1" gutterBottom>
             Max score: 18
           </Typography>

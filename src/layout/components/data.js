@@ -18,95 +18,97 @@ import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 import MouseIcon from "@material-ui/icons/Mouse";
 import GroupIcon from "@material-ui/icons/Group";
 
-export const data = [
+const data = [
   {
-    src: <ZoomInIcon style={{ fontSize: 100 }} />,
+    src: <ZoomInIcon style={{ fontSize: 125 }} />,
     text: "Zoom In",
     id: uuidv4(),
   },
   {
-    src: <WifiIcon style={{ fontSize: 100 }} />,
+    src: <WifiIcon style={{ fontSize: 125 }} />,
     text: "Wifi",
     id: uuidv4(),
   },
   {
-    src: <WhatsAppIcon style={{ fontSize: 100 }} />,
+    src: <WhatsAppIcon style={{ fontSize: 125 }} />,
     text: "WhatsApp",
     id: uuidv4(),
   },
   {
-    src: <VolumeOffIcon style={{ fontSize: 100 }} />,
+    src: <VolumeOffIcon style={{ fontSize: 125 }} />,
     text: "Volume Off",
     id: uuidv4(),
   },
   {
-    src: <VerifiedUserIcon style={{ fontSize: 100 }} />,
+    src: <VerifiedUserIcon style={{ fontSize: 125 }} />,
     text: "Verified User",
     id: uuidv4(),
   },
   {
-    src: <TwitterIcon style={{ fontSize: 100 }} />,
+    src: <TwitterIcon style={{ fontSize: 125 }} />,
     text: "Twitter",
     id: uuidv4(),
   },
   {
-    src: <TodayIcon style={{ fontSize: 100 }} />,
+    src: <TodayIcon style={{ fontSize: 125 }} />,
     text: "Today",
     id: uuidv4(),
   },
   {
-    src: <ThumbUpIcon style={{ fontSize: 100 }} />,
+    src: <ThumbUpIcon style={{ fontSize: 125 }} />,
     text: "Thumb Up",
     id: uuidv4(),
   },
   {
-    src: <StarRateIcon style={{ fontSize: 100 }} />,
+    src: <StarRateIcon style={{ fontSize: 125 }} />,
     text: "Star",
     id: uuidv4(),
   },
   {
-    src: <SearchIcon style={{ fontSize: 100 }} />,
+    src: <SearchIcon style={{ fontSize: 125 }} />,
     text: "Search",
     id: uuidv4(),
   },
   {
-    src: <RestaurantIcon style={{ fontSize: 100 }} />,
+    src: <RestaurantIcon style={{ fontSize: 125 }} />,
     text: "Restaurant",
     id: uuidv4(),
   },
   {
-    src: <RedditIcon style={{ fontSize: 100 }} />,
+    src: <RedditIcon style={{ fontSize: 125 }} />,
     text: "Reddit",
     id: uuidv4(),
   },
   {
-    src: <PrintIcon style={{ fontSize: 100 }} />,
+    src: <PrintIcon style={{ fontSize: 125 }} />,
     text: "Print",
     id: uuidv4(),
   },
   {
-    src: <PoolIcon style={{ fontSize: 100 }} />,
+    src: <PoolIcon style={{ fontSize: 125 }} />,
     text: "Pool",
     id: uuidv4(),
   },
   {
-    src: <PhotoCameraIcon style={{ fontSize: 100 }} />,
+    src: <PhotoCameraIcon style={{ fontSize: 125 }} />,
     text: "Camera",
     id: uuidv4(),
   },
   {
-    src: <NotificationsActiveIcon style={{ fontSize: 100 }} />,
+    src: <NotificationsActiveIcon style={{ fontSize: 125 }} />,
     text: "Notifications",
     id: uuidv4(),
   },
   {
-    src: <MouseIcon style={{ fontSize: 100 }} />,
+    src: <MouseIcon style={{ fontSize: 125 }} />,
     text: "Mouse",
     id: uuidv4(),
   },
   {
-    src: <GroupIcon style={{ fontSize: 100 }} />,
+    src: <GroupIcon style={{ fontSize: 125 }} />,
     text: "Group",
     id: uuidv4(),
   },
 ];
+
+export default data;

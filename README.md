@@ -1,11 +1,14 @@
 <h1 align="center">Welcome to Memory Game Application 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
-> Simple game that tests your memory. Project that helped me understand basics of React Hooks. I also used Material-UI.
+## Description
 
-### 🏠 [Homepage](http://willdooo.github.io/memory-game_app)
+Simpel game to test your memory with icons. In this project I learned about React Hooks. Project made as part of [The Odin Project's curriculum](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/memory-card).
+
+## Development
+
+- React, JS, CSS
 
 ## Install
 
